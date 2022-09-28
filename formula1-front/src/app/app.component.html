@@ -1,0 +1,406 @@
+
+
+<div class="main-bar">
+    <a class="main-bar-brand">Formula1 Tracker</a>
+    <h3 class="add-driver" (click)="onOpenModal(null!, 'add')" >Add Driver</h3>
+</div>
+
+<div class="box-container">
+  <div class="box">
+    <form name="search">
+        <input type="search" (ngModelChange)="searchDrivers(key.value)" #key="ngModel" ngModel
+        class="input" id="searchDriver" name="search" onmouseout="this.value = ''; this.blur();">
+      </form>
+  </div>
+</div>
+
+
+
+<!-- ============================================================================ -->
+<!-- HARD CODED CARDS FOR SHOW -->
+<div class="static-cards-for-show">
+  
+  <!-- Drin Hoxha -->
+  <div class="container" id="main-container">
+    <div class="cards">
+      <div class="flip-card-container" style="--hue: 220">
+          <div class="flip-card">
+        
+            <div class="card-front">
+              <figure>
+                <div class="img-bg"></div>
+                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQHu5KS8i5eAcA/profile-displayphoto-shrink_800_800/0/1663495010409?e=1669248000&v=beta&t=-neyWWtNCQNhZ7k4Iga19js8cFVQYk4rvJn8n7fkLKE" alt="Driver Team Photo">
+                <figcaption>Drin Hoxha</figcaption>
+              </figure>
+            </div>
+        
+            <div class="card-back">
+              <figure>
+                <div class="img-bg"></div>
+                <img class="f1-backcard-img" src="https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/157326079_5115236721881569_2054927071038790688_n.png?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JlXRr1Fa3x4AX_QmMBx&_nc_ht=scontent-vie1-1.xx&oh=00_AT_iOf2p_1mELzWFDrYeKtGlsZU1ulrXbX7hK3P_4sNkMQ&oe=6358EC3C" alt="Team Photo">
+              </figure>
+
+              <ul class="driver-stats" id="static-cards">
+                <li>Team: TU Graz</li>
+                <li>Points this season: 390</li>
+                <li>Grand Prix entered: 87</li>
+                <li>Podiums: 42</li>
+                <li>Wins: 32</li>
+                <li>Age: 23</li>
+                <li>Poles: 18</li>
+              </ul>
+        
+              <!-- <div class="driver-buttons">
+                  <div class="driver-btn edit-driver-button">
+                    <a (click)="onOpenModal(driver, 'edit')">Edit</a>
+                  </div>
+                  <div class="tmp-div"></div>
+                  <div class="driver-btn delete-driver-button">
+                    <a (click)="onOpenModal(driver, 'delete')">Delete</a>
+                  </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  
+  <!-- MAX VERSTAPPEN -->
+  <div class="container" id="main-container">
+    <div class="cards">
+      <div class="flip-card-container" style="--hue: 220">
+          <div class="flip-card">
+        
+            <div class="card-front">
+              <figure>
+                <div class="img-bg"></div>
+                <img src="https://www.formula1.com/content/fom-website/en/drivers/max-verstappen/_jcr_content/image.img.1536.medium.jpg/1646819045507.jpg" alt="Driver Team Photo">
+                <figcaption>Max Verstappen</figcaption>
+              </figure>
+            </div>
+        
+            <div class="card-back">
+              <figure>
+                <div class="img-bg"></div>
+                <img class="f1-backcard-img" src="https://www.wallpaperuse.com/wallp/63-638425_m.png" alt="Team Photo">
+              </figure>
+
+              <ul class="driver-stats" id="static-cards">
+                <li>Team: Red Bull</li>
+                <li>Points this season: 335</li>
+                <li>Grand Prix entered: 157</li>
+                <li>Podiums: 38</li>
+                <li>Wins: 31</li>
+                <li>Age: 25</li>
+                <li>Poles: 17</li>
+              </ul>
+        
+              <!-- <div class="driver-buttons">
+                  <div class="driver-btn edit-driver-button">
+                    <a (click)="onOpenModal(driver, 'edit')">Edit</a>
+                  </div>
+                  <div class="tmp-div"></div>
+                  <div class="driver-btn delete-driver-button">
+                    <a (click)="onOpenModal(driver, 'delete')">Delete</a>
+                  </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <!-- CHARLES LECLERC -->
+  <div class="container" id="main-container">
+    <div class="cards">
+      <div class="flip-card-container" style="--hue: 220">
+          <div class="flip-card">
+        
+            <div class="card-front">
+              <figure>
+                <div class="img-bg"></div>
+                <img src="https://www.formula1.com/content/fom-website/en/drivers/charles-leclerc/_jcr_content/image.img.1920.medium.jpg/1646818893219.jpg" alt="Driver Team Photo">
+                <figcaption>Charles Leclerc</figcaption>
+              </figure>
+            </div>
+        
+            <div class="card-back">
+              <figure>
+                <div class="img-bg"></div>
+                <img class="f1-backcard-img" src="https://i.pinimg.com/originals/72/0c/a6/720ca6b4a7882cbd0a482fb8aae983ff.jpg" alt="Team Photo">
+              </figure>
+
+              <ul class="driver-stats" id="static-cards">
+                <li>Team: Ferrari</li>
+                <li>Points this season: 219</li>
+                <li>Grand Prix entered: 97</li>
+                <li>Podiums: 20</li>
+                <li>Wins: 5</li>
+                <li>Age: 24</li>
+                <li>Poles: 17</li>
+              </ul>
+        
+              <!-- <div class="driver-buttons">
+                  <div class="driver-btn edit-driver-button">
+                    <a (click)="onOpenModal(driver, 'edit')">Edit</a>
+                  </div>
+                  <div class="tmp-div"></div>
+                  <div class="driver-btn delete-driver-button">
+                    <a (click)="onOpenModal(driver, 'delete')">Delete</a>
+                  </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- LEWIS HAMITLON -->
+  <div class="container" id="main-container">
+    <div class="cards">
+      <div class="flip-card-container" style="--hue: 220">
+          <div class="flip-card">
+        
+            <div class="card-front">
+              <figure>
+                <div class="img-bg"></div>
+                <img src="https://www.formula1.com/content/fom-website/en/drivers/lewis-hamilton/_jcr_content/image.img.1920.medium.jpg/1647334259839.jpg" alt="Driver Team Photo">
+                <figcaption>Lewis Hamilton</figcaption>
+              </figure>
+            </div>
+        
+            <div class="card-back">
+              <figure>
+                <div class="img-bg"></div>
+                <img class="f1-backcard-img" src="https://w0.peakpx.com/wallpaper/952/703/HD-wallpaper-amg-petronas-f1-formula-1-formule-1-mercedes.jpg" alt="Team Photo">
+              </figure>
+
+              <ul class="driver-stats" id="static-cards">
+                <li>Team: Mercedes</li>
+                <li>Points this season: 168</li>
+                <li>Grand Prix entered: 304</li>
+                <li>Podiums: 188</li>
+                <li>Wins: 103</li>
+                <li>Age: 37</li>
+                <li>Poles: 103</li>
+              </ul>
+        
+              <!-- <div class="driver-buttons">
+                  <div class="driver-btn edit-driver-button">
+                    <a (click)="onOpenModal(driver, 'edit')">Edit</a>
+                  </div>
+                  <div class="tmp-div"></div>
+                  <div class="driver-btn delete-driver-button">
+                    <a (click)="onOpenModal(driver, 'delete')">Delete</a>
+                  </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+
+<!-- ============================================================================= -->
+
+
+<!-- flip-card-container -->
+<div class="container" id="main-container">
+  <div class="cards">
+    <div *ngFor="let driver of drivers | sortByPoints" class="flip-card-container" style="--hue: 220">
+        <div class="flip-card">
+      
+          <div class="card-front">
+            <figure>
+              <div class="img-bg"></div>
+              <img src="{{driver?.driverPhoto}}" alt="Driver Team Photo">
+              <figcaption>{{driver?.fullName}}</figcaption>
+            </figure>
+          </div>
+      
+          <div class="card-back">
+            <figure>
+              <div class="img-bg"></div>
+              <img class="f1-backcard-img" src="{{driver?.teamPhoto}}" alt="Team Photo">
+            </figure>
+
+            <ul class="driver-stats">
+              <li>Team: {{driver?.team}}</li>
+              <li>Points this season: {{driver?.points}}</li>
+              <li>Grand Prix entered: {{driver?.gpEntered}}</li>
+              <li>Podiums: {{driver?.podiums}}</li>
+              <li>Wins: {{driver?.numberOfWins}}</li>
+              <li>Age: {{driver?.age}}</li>
+              <li>Poles: {{driver?.poles}}</li>
+            </ul>
+      
+            <div class="driver-buttons">
+                <div class="driver-btn edit-driver-button">
+                  <a (click)="onOpenModal(driver, 'edit')">Edit</a>
+                </div>
+                <div class="tmp-div"></div>
+                <div class="driver-btn delete-driver-button">
+                  <a (click)="onOpenModal(driver, 'delete')">Delete</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Add Driver Modal -->
+<div class="modal fade" id="addDriverModal" tabindex="-1" role="dialog" aria-labelledby="addDriverModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+       <div class="modal-header">
+          <h5 class="modal-title" id="addDriverModalLabel">Add Driver</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+       </div>
+       <div class="modal-body">
+          <form #addForm="ngForm" (ngSubmit)="onAddDriver(addForm)">
+            <div class="form-group">
+              <label for="fullName">Name</label>
+              <input type="text" ngModel name="fullName" class="form-control" id="fullName" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <label for="points">Points this season</label>
+              <input type="text" ngModel name="points" class="form-control" id="points" placeholder="Points this season" required>
+            </div>
+            <div class="form-group">
+              <label for="gpEntered">Grand Prix Entered</label>
+              <input type="email" ngModel name="gpEntered" class="form-control" id="gpEntered" placeholder="Grand prix entered" required>
+            </div>
+            <div class="form-group">
+              <label for="podiums">Podiums</label>
+              <input type="text" ngModel name="podiums" class="form-control" id="podiums" placeholder="Podiums" required>
+            </div>
+            <div class="form-group">
+              <label for="numberOfWins">Race Wins</label>
+              <input type="text" ngModel name="numberOfWins" class="form-control" id="numberOfWins" placeholder="Wins" required>
+            </div>
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="text" ngModel name="age" class="form-control" id="age" placeholder="Age" required>
+            </div>
+            <div class="form-group">
+              <label for="poles">Poles</label>
+              <input type="text" ngModel name="poles" class="form-control" id="poles" placeholder="Poles" required>
+          </div>
+          <div class="form-group">
+            <label for="team">Team</label>
+            <input type="text" ngModel name="team" class="form-control" id="team" placeholder="Team" required>
+          </div>
+          <div class="form-group">
+            <label for="driverPhoto">Driver Photo</label>
+            <input type="text" ngModel name="driverPhoto" class="form-control" id="driverPhoto" placeholder="Driver photo" required>
+          </div>
+          <div class="form-group">
+            <label for="teamPhoto">Team Photo</label>
+            <input type="text" ngModel name="teamPhoto" class="form-control" id="teamPhoto" placeholder="Team photo" required>
+          </div>
+            <div class="modal-footer">
+              <button type="button" id="add-driver-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+          </form>
+       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal fade" id="updateDriverModal" tabindex="-1" role="dialog" aria-labelledby="editDriverModalLabel" aria-hidden="true"> 
+  <div class="modal-dialog" role="document">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title" id="updateDriverModalLabel">Edit Driver {{editDriver?.fullName}}</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+           </button>
+        </div>
+        <div class="modal-body">
+           <form #editForm="ngForm">
+            <input type="hidden" ngModel="{{editDriver?.id}}" name="id" class="form-control" id="id" placeholder="id">
+              <div class="form-group">
+                 <label for="name">Name</label>
+                 <input type="text" ngModel="{{editDriver?.fullName}}" name="fullName" class="form-control" id="fullName" aria-describedby="emailHelp" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="points">Points this season</label>
+                <input type="text" ngModel="{{editDriver?.points}}" name="points" class="form-control" id="points" placeholder="Points this season">
+             </div>
+             <div class="form-group">
+              <label for="gpEntered">Grang Prix Entered</label>
+              <input type="text" ngModel="{{editDriver?.gpEntered}}" name="gpEntered" class="form-control" id="gpEntered" placeholder="Grand prix entered">
+            </div>
+              <div class="form-group">
+                 <label for="email">Podiums</label>
+                 <input type="email" ngModel="{{editDriver?.podiums}}" name="podiums" class="form-control" id="podiums" placeholder="Podiums">
+              </div>
+              <div class="form-group">
+                 <label for="numberOfWins">Wins</label>
+                 <input type="text" ngModel="{{editDriver?.numberOfWins}}" name="numberOfWins" class="form-control" id="numberOfWins" placeholder="Job title">
+              </div>
+              <div class="form-group">
+                 <label for="age">Age</label>
+                 <input type="text" ngModel="{{editDriver?.age}}" name="age" class="form-control" id="age" name="age" placeholder="Age">
+              </div>
+              <div class="form-group">
+                 <label for="poles">Poles</label>
+                 <input type="text" ngModel="{{editDriver?.poles}}" name="poles" class="form-control" id="poles" placeholder="Poles">
+              </div>
+              <div class="form-group">
+                <label for="team">Team</label>
+                <input type="text" ngModel="{{editDriver?.team}}" name="team" class="form-control" id="team" placeholder="Team">
+              </div>
+              <div class="form-group">
+              <label for="driverPhoto">Driver Photo</label>
+              <input type="text" ngModel="{{editDriver?.driverPhoto}}" name="driverPhoto" class="form-control" id="driverPhoto" placeholder="Image URL">
+              </div>
+              <div class="form-group">
+                <label for="teamPhoto">Team Photo</label>
+                <input type="text" ngModel="{{editDriver?.teamPhoto}}" name="teamPhoto" class="form-control" id="teamPhoto" placeholder="Image URL">
+              </div>
+              <div class="modal-footer">
+                 <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                 <button (click)="onUpdateDriver(editForm.value)" data-dismiss="modal" class="btn btn-primary" >Save changes</button>
+              </div>
+           </form>
+        </div>
+     </div>
+  </div>
+</div>
+
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteDriverModal" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title" id="deleteModelLabel">Delete Driver</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+           </button>
+        </div>
+        <div class="modal-body">
+           <p>Are you sure you want to delete driver "{{deleteDriver?.fullName}}"?</p>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+              <button (click)="onDeleteDriver(deleteDriver!.id)" class="btn btn-danger" data-dismiss="modal">Yes</button>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+<!-- Notification for no drivers -->
+<div *ngIf="drivers?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+  <div class="alert alert-info" role="alert">
+    <h4 class="alert-heading">NO DRIVERS!</h4>
+    <p>No drivers were found.</p>
+  </div>
+</div>
